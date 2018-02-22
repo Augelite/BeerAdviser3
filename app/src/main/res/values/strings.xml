@@ -1,4 +1,11 @@
 <resources>
-    <string name="app_name">BeerAdviser3</string>
+    <string name="app_name">BeerAdviser2</string>
     <string name="action_settings">Settings</string>
+    <string name="light">Light</string>
+    <string-array name="arrBeerTypes">
+        <item>Светлое</item>
+        <item>Темное </item>
+        <item>Вкусное</item>
+        <item>Горькое</item>
+    </string-array>
 </resources>
