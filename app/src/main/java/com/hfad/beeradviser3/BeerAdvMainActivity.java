@@ -49,26 +49,38 @@ public class BeerAdvMainActivity extends AppCompatActivity {
         spinner = (Spinner) findViewById(R.id.spinner);
         text1 = (TextView) findViewById(R.id.text1);
 
-
-        /*button2.setOnClickListener(new View.OnClickListener()
+        //Этот метод  чаще применяется среди программистов(вещаем листенер прям в методе OnCreate)
+        button2.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v)
             {
-                text1.setText(" onStart!!/");
+                switch (spinner.getSelectedItem().toString()) {
+                    case "Светлое":
+                        text1.setText("Светлое пиво 1 "+"\n"+"Светлое пиво 2");
+                        break;
+                    case "Темное":
+                        text1.setText("Темное пиво 1 "+"\n"+"Темное пиво 2");
+                        break;
+
+                }
+                //text1.setText(spinner.getSelectedItem().toString()); Отображаем текст со спинера  на TextView
+                // текст - константа :" onStart!!/"
+
                 //ImageView iv = (ImageView) findViewById(R.id.imageview1);
                 //iv.setVisibility(View.VISIBLE);
 
             }
-        });*/
+        });
 
 
     }
 
-    public void onClickButton(View v) {
+  // public void onClickButton(View v) {
+
 
         //text1.setText(spinner.getSelectedItemPosition() );//" onStart!!/"
        //20.02.1018
-        text1.setText(" onStart!!/");//
+       // text1.setText(spinner.getSelectedItem().toString());//" onStart!!/"
 
         /*
         final int id = v.getId();
@@ -83,7 +95,8 @@ public class BeerAdvMainActivity extends AppCompatActivity {
             // even more buttons here
 
         }*/
-        /*switch (spinner.getSelectedItem()) {
+        /*
+          switch (spinner.getSelectedItem()) {
             case R.string.:
 
                 // your code for button1 here
@@ -93,7 +106,7 @@ public class BeerAdvMainActivity extends AppCompatActivity {
                 break;
             // even more buttons here
             */
-    }
+   // }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
